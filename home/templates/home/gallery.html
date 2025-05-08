@@ -492,3 +492,83 @@
         </div>
         <div>
           <h2>Opening Hours</h2>
+          <p>Mon – Sat, 8AM – 5PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © Domain. All Rights Reserved. Designed by <span>HTML Codex</span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalGallery = document.getElementById("modalGallery");
+    let currentIndex = 0;
+    let images = [];
+  
+    // Add click listeners to each gallery item
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        images = JSON.parse(item.getAttribute('data-images'));
+        currentIndex = 0;
+        openModal();
+      });
+    });
+  
+    // Open modal and show first image
+    function openModal() {
+      modal.style.display = "flex";
+      updateModalContent();
+    }
+  
+    // Close modal
+    function closeModal() {
+      modal.style.display = "none";
+    }
+  
+    // Change image by direction (-1 or 1)
+    function changeImage(direction) {
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      updateModalContent();
+    }
+  
+    // Update modal content to show current image
+    function updateModalContent() {
+      modalGallery.innerHTML = `
+        <img src="${images[currentIndex]}" class="modal-img" alt="Gallery Image" />
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
+      `;
+    }
+  
+    // Optional: close modal when clicking outside the image
+    window.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+     // Filter buttons
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+
+      galleryItems.forEach(item => {
+        const category = item.getAttribute("data-category");
+        if (filter === "all" || filter === category) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+  </script>
+</body>
+</html>
