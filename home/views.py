@@ -14,6 +14,33 @@ def home(request):
 def Product(request):
     return render(request,'home/Product.html')
 
+def About(request):
+    return render(request,'home/about.HTML')
+
+def Blog(request):
+    return render(request,'home/blog.html')
+
+def Blog_detail(request):
+    return render(request,'home/blog_detail.html')
+
+def Cart(request):
+    return render(request,'home/cart.html')
+
+def Checkout(request):
+    return render(request,'home/checkout.html')
+
+def Contact(request):
+    return render(request,'home/contact.html')
+
+def Gallery(request):
+    return render(request,'home/gallery.html')
+
+def product_detail(request):
+    return render(request,'home/product_detail.html')
+
+def Wishlist(request):
+    return render(request,'home/wishlist.html')
+
 def signup_view(request):
     if request.method == 'POST':
         first = request.POST['first_name']

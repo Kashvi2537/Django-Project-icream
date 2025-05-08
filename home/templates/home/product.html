@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>iCream - Product</title>
+  <title>iCREAM - Product</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
@@ -23,81 +23,95 @@
 
     /* Top Bar */
     .top-bar {
-    background: #f9a9c4;
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    color: white;
-    align-items: center;
-    height:100px;
-  }
-  
-  .top-bar a {
-    color: white;
-    margin: 0 0.5rem;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .left-links a::after {
-    content: "";
-  }
-  
-  .right-icons a {
-    margin-left: 10px;
-    font-size: 16px; /* or maybe 20px depending on what you want */
-    color: white;
-  }
-  
-  
-  /* Navigation Bar */
-  .navbar {
-    background: white;
-    border-radius: 40px;
-    padding: 1.2rem 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-    width: 90%;
-    max-width: 1200px;
-    margin: -40px auto 0;
-    z-index: 10;
-    position: relative;
-    height:90px;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 15px;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a.active,
-  .nav-links a:hover {
-    color: #f57aa7;
-  }
-  
-  .logo {
-    font-size: 50px;
-    font-weight: 700;
-    color: #40cbee;
-  }
-  
-  .logo span {
-    color: #f57aa7;
-  }
+      background: #f9a9c4;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: white;
+      align-items: center;
+      height: 100px;
+    }
+
+    .top-bar a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .left-links a::after {
+      content: "";
+    }
+
+    .right-icons a {
+      margin-left: 10px;
+      font-size: 16px;
+      /* or maybe 20px depending on what you want */
+      color: white;
+    }
+
+    .cart-icon a {
+      margin-left: 10px;
+      font-size: 16px;
+      /* or maybe 20px depending on what you want */
+      color: white;
+    }
+
+    #cartIcon {
+      position: relative;
+      display: inline-block;
+    }
+
+
+    /* Navigation Bar */
+    .navbar {
+      background: white;
+      border-radius: 40px;
+      padding: 1.2rem 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+      width: 90%;
+      max-width: 1200px;
+      margin: -40px auto 0;
+      z-index: 10;
+      position: relative;
+      height: 90px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin-top: -20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: #f57aa7;
+    }
+
+    .logo {
+      font-size: 50px;
+      font-weight: 700;
+      color: #40cbee;
+    }
+
+    .logo span {
+      color: #f57aa7;
+    }
 
     /* Hero Section */
     .hero {
@@ -110,7 +124,7 @@
       color: white;
       text-align: center;
       position: relative;
-      margin-top:-50px;
+      margin-top: -50px;
     }
 
     .hero::after {
@@ -124,14 +138,15 @@
     }
 
     .hero h1 {
-      font-size: 48px;
-      font-weight: bold;
+      font-size: 65px;
+      font-weight: 900;
       position: relative;
       z-index: 1;
+      color:white;
     }
 
     .breadcrumb {
-      margin-top: 10px;
+      margin-top: -6px;
       font-size: 18px;
       position: relative;
       z-index: 1;
@@ -144,9 +159,8 @@
 
     .breadcrumb span {
       margin: 0 5px;
-      color: #eb6ca7;
-      ;
-      font-size: 20px;
+      color: white;
+      font-size: 18px;
     }
 
     /* Responsive Design */
@@ -284,24 +298,29 @@
     #scrollUpBtn:hover {
       background-color: #429bbd;
     }
-    .nav_container{
+
+    .nav_container {
       margin-top: -10px;
       background-color: #f788bc;
     }
-    .outer{
+
+    .outer {
       width: 100%;
       display: flex;
       justify-content: space-between;
     }
-    .inner{
+
+    .inner {
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .inner > a{
+
+    .inner>a {
       text-decoration: none;
     }
-    .heading{
+
+    .heading {
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -328,20 +347,20 @@
     }
 
     #productList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
 
-.grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
 
-#productContainer {
+    #productContainer {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -349,33 +368,46 @@
     }
 
     .card {
-  background-color: white;
-  border-radius: 15px;
-  width: calc(25% - 20px); /* 4 cards per row with gap considered */
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  text-align: center;
-}
+      background-color: white;
+      border-radius: 15px;
+      width: calc(25% - 20px);
+      /* 4 cards per row with gap considered */
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      text-align: center;
+      transform: translateY(20px);
+      animation: fadeIn 0.6s forwards;
+    }
 
-#productContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
 
-@media (max-width: 992px) {
-  .card {
-    width: calc(50% - 20px); /* 2 per row on tablets */
-  }
-}
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-@media (max-width: 600px) {
-  .card {
-    width: 100%; /* 1 per row on phones */
-  }
-}
+    #productContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    @media (max-width: 992px) {
+      .card {
+        width: calc(50% - 20px);
+        /* 2 per row on tablets */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 100%;
+        /* 1 per row on phones */
+      }
+    }
 
 
     .card img {
@@ -397,16 +429,19 @@
       left: 50%;
       transform: translateX(-50%);
       transition: all 0.3s ease;
-  cursor: pointer;
+      cursor: pointer;
     }
 
 
 
     .price-tag:hover {
-  background-color: #ff66b2;         /* darker pink on hover */
-  transform: translateX(-50%) scale(1.1); /* pop up slightly */
-  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.6); /* deeper hover shadow */
-}
+      background-color: #ff66b2;
+      /* darker pink on hover */
+      transform: translateX(-50%) scale(1.1);
+      /* pop up slightly */
+      box-shadow: 0 6px 16px rgba(255, 105, 180, 0.6);
+      /* deeper hover shadow */
+    }
 
     .card h3 {
       margin: 15px 0 10px;
@@ -427,35 +462,35 @@
       background-color: #33c1ff;
     }
 
-    .c1{
+    .c1 {
       display: flex;
       width: 100%;
       justify-content: space-between;
       margin-bottom: 15px;
       gap: 20px;
     }
-    .c1>div{
-      
+
+    .c1>div {
+
       height: 300px;
       width: 255px;
-    
+
     }
-    
+
     button {
       margin-top: 10px;
       padding: 5px 10px;
     }
 
-    #loadMoreBtn{
-      background-color:#f788bc;
+    #loadMoreBtn {
+      background-color: #f788bc;
       color: white;
       width: 181px;
-      height:57px;
+      height: 57px;
       border-radius: 30px;
       margin-left: 550px;
       margin-top: 50px;
     }
-
   </style>
 </head>
 
@@ -470,26 +505,27 @@
     <div class="right-icons">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="/Wishlist"><i class="fa-solid fa-heart"></i></a>
+      <!--<i class="fa-solid fa-cart-shopping"></i>-->
       <a href="/login"><i class="fa-solid fa-user" style="color: white;"></i></a>
+      <a href="/Cart" alt="Cart" id="cartIcon" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
     </div>
   </div>
 
   <!-- Navigation -->
   <header class="navbar">
     <nav>
-      <ul class="nav-links" id="nav-links">
+      <ul class="nav-links">
         <li><a class="active" href="/">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Product</a></li>
+        <li><a href="/About">About</a></li>
+        <li><a href="/Product">Product</a></li>
       </ul>
       <div class="logo">i<span>CREAM</span></div>
       <ul class="nav-links">
-        <li><a href="#">Service</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/Blog">Blogs</a></li>
+        <li><a href="/Gallery">Gallery</a></li>
+        <li><a href="/Contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -509,7 +545,7 @@
       <h1 style="text-align: center; font-weight: bold; margin-top: -5px;"><strong> Ice Cream Lovers</strong></h1>
     </div>
   </div>
-  <div id="productContainer" ></div>
+  <div id="productContainer"></div>
   <button id="loadMoreBtn">Load More</button>
 
   <!-- Footer Section -->
@@ -545,45 +581,59 @@
 
   <!-- Scroll Up Button -->
   <button id="scrollUpBtn" title="Go to top">↑</button>
-
-
   <script>
-    const productContainer = document.getElementById('productContainer');
+     const productContainer = document.getElementById('productContainer');
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     let currentIndex = 0;
     const itemsPerLoad = 8;
 
     const products = [
-      { img: '/static/img/Vanilla.png', title: 'Vanilla Ice Cream', price: '$99' },
-      { img: '/static/img/chocolate.png', title: 'Chocolate Ice Cream', price: '$89' },
-      { img: '/static/img/Strawberry.png', title: 'Strawberry Delight', price: '$79' },
-      { img: '/static/img/Coconut.png', title: 'Coconut Twist', price: '$109' },
-      { img: '/static/img/Pistachio.png', title: 'Pistachio Ice Cream', price: '$95' },
-      { img: '/static/img/Hazelnut.png', title: 'Hazelnut Crunch Ice Cream', price: '$105' },
-      { img: '/static/img/Rosemary.png', title: 'Rosemary Ice Cream', price: '$99' },
-      { img: '/static/img/Blueberry.png', title: 'Blueberry Ice Cream', price: '$120' },
-      { img: '/static/img/mango.jpg', title: 'Pulpy Mango', price: '$85' },
-      { img: '/static/img/Coffee.jpg', title: 'Coffee Cream', price: '$90' },
-      { img: '/static/img/cotton.jpg', title: 'Cotton Candy Ice Cream', price: '$88' },
-      { img: '/static/img/blackcurrent.jpg', title: 'Black Current', price: '$97' },
-      { img: '/static/img/blackwalnut.jpg', title: 'Black Walnut Ice Cream', price: '$92' },
-      { img: '/static/img/Caramel.jpg', title: 'Nutty Caramel', price: '$110' },
-      { img: '/static/img/cookies.jpg', title: 'Cookies n Cream', price: '$102' },
-      { img: '/static/img/mint.jpg', title: 'Mint Choco Chips', price: '$98' }
+      { id: 1,img: '/static/img/Vanilla.png', title: 'Vanilla Ice Cream', price: 19,artNo: "IC103",color: "White",size: "Medium" },
+      { id: 2,img: '/static/img/chocolate.png', title: 'Chocolate Ice Cream', price: 29,artNo: "IC104",color: "Brown",size: "Medium" },
+      { id: 3,img: '/static/img/Strawberry.png', title: 'Strawberry Delight', price: 20,artNo: "IC105",color: "Pink",size: "Medium" },
+      { id: 4,img: '/static/img/Coconut.png', title: 'Coconut Twist', price: 19,artNo: "IC106",color: "White",size: "Medium" },
+      { id: 5,img: '/static/img/Pistachio.png', title: 'Pistachio Ice Cream', price: 39,artNo: "IC107",color: "Pista",size: "Medium" },
+      { id: 6,img: '/static/img/Hazelnut.png', title: 'Hazelnut Crunch Ice Cream', price: 35,artNo: "IC108",color: "Brown",size: "Medium" },
+      { id: 7,img: '/static/img/Rosemary.png', title: 'Rosemary Ice Cream', price: 25,artNo: "IC109",color: "Light Pink",size: "Medium" },
+      { id: 8,img: '/static/img/Blueberry.png', title: 'Blueberry Ice Cream', price: 20,artNo: "IC110",color: "Blue",size: "Medium" },
+      { id: 9,img: '/static/img/mango.jpg', title: 'Pulpy Mango', price: 25,artNo: "IC111",color: "Yellow",size: "Medium" },
+      { id: 10,img: '/static/img/Coffee.jpg', title: 'Coffee Cream', price: 29,artNo: "IC112",color: "Brown",size: "Medium" },
+      { id: 11,img: '/static/img/cotton.jpg', title: 'Cotton Candy Ice Cream', price: 23 ,artNo: "IC113",color: "White",size: "Medium"},
+      { id: 12,img: '/static/img/blackcurrent.jpg', title: 'Black Current', price: 29 ,artNo: "IC114",color: "Violet",size: "Medium"},
+      { id: 13,img: '/static/img/blackwalnut.jpg', title: 'Black Walnut Ice Cream', price: 25,artNo: "IC115",color: "Light Brown",size: "Medium" },
+      { id: 14,img: '/static/img/Caramel.jpg', title: 'Nutty Caramel', price: 35,artNo: "IC116",color: "Light Brown",size: "Medium" },
+      { id: 15,img: '/static/img/cookies.jpg', title: 'Cookies n Cream', price: 27,artNo: "IC117",color: "Brown",size: "Medium" },
+      { id: 16,img: '/static/img/mint.jpg', title: 'Mint Choco Chips', price: 28 ,artNo: "IC118",color: "Green",size: "Medium"}
     ];
 
+
+
+
+
+    // Function to load products
     function loadProducts() {
       for (let i = currentIndex; i < currentIndex + itemsPerLoad && i < products.length; i++) {
         const product = products[i];
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-          <div class="price-tag">${product.price}</div>
+          <a href="/product_detail?id=${product.id}" style="text-decoration: none; color: inherit;">
+          <div class="price-tag">$${product.price}</div>
           <img src="${product.img}" alt="${product.title}" />
           <h3>${product.title}</h3>
-          <button>Order Now</button>
+          <button class="orderButton">Order Now</button>
+          </a>
         `;
         productContainer.appendChild(card);
+
+        // Add to cart functionality
+        const orderBtn = card.querySelector('.orderButton');
+        orderBtn.addEventListener('click', function () {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          cart.push(product);
+          localStorage.setItem('cart', JSON.stringify(cart));  // Store cart in local storage
+          alert('✅ Your item "' + product.title + '" has been added to cart!');
+        });
       }
 
       currentIndex += itemsPerLoad;
@@ -593,9 +643,17 @@
       }
     }
 
+    // Initial page load
+    window.onload = function() {
+      loadProducts();
+    };
+
+    // Load more button
     loadMoreBtn.addEventListener('click', loadProducts);
-    window.onload = loadProducts;
   </script>
- </body>
+
+
+
+</body>
 
 </html>
